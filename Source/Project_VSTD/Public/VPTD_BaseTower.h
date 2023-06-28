@@ -29,6 +29,6 @@ public:
 	float MoveWithDis;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
-	float TEST;
+	float test_t;
 
 };
