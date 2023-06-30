@@ -12,6 +12,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnEXPChanged,AActor*,InstigatorA
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FOnMoneyChanged,AActor*,InstigatorActor,UVPTD_AttributeComponent*,OwningComp,int32,MewMoney,int32,Delta);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnLevelChanged,AActor*,InstigatorActor,UVPTD_AttributeComponent*,OwningComp,int32,Delta);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECT_VSTD_API UVPTD_AttributeComponent : public UActorComponent
 {
@@ -57,6 +59,9 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnMoneyChanged OnMoneyChangedDelegated;
 
+	UPROPERTY(BlueprintAssignable)
+	FOnLevelChanged OnLevelChangedDelegated;
+
 	UFUNCTION(BlueprintCallable)
 	bool ApplyChangeHealth(AActor*Instigator,float Delta);
     
@@ -65,6 +70,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool ApplyChangeMoney(AActor* InstigatorActor,int32 Delta);
+
+	UFUNCTION(BlueprintCallable)
+	bool ApplyChangeLevel(AActor* InstigatorActor,int32 Delta = 1);
 
 
 public:

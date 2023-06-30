@@ -67,7 +67,12 @@ bool UVPTD_AttributeComponent::ApplyChangeHealth(AActor* Instigator, float Delta
 bool UVPTD_AttributeComponent::ApplyChangeEXP(AActor* InstigatorActor,int32 Delta)
 {
 	TotalEXP += Delta;
-	Level = TotalEXP / PerLevelEXP;
+	int32 NewLevel = TotalEXP / PerLevelEXP;
+	if(NewLevel > Level)
+	{
+		ApplyChangeLevel(GetOwner(),NewLevel - Level);
+	}
+	
 
 	OnExpChangedDelegated.Broadcast(InstigatorActor,nullptr,Delta);
 
@@ -79,6 +84,15 @@ bool UVPTD_AttributeComponent::ApplyChangeMoney(AActor* InstigatorActor, int32 D
 	Money += Delta;
 
 	OnMoneyChangedDelegated.Broadcast(InstigatorActor,nullptr,Money,Delta);
+
+	return true;
+}
+
+bool UVPTD_AttributeComponent::ApplyChangeLevel(AActor* InstigatorActor, int32 Delta)
+{
+	Level += Delta;
+
+	OnLevelChangedDelegated.Broadcast(InstigatorActor,nullptr,Delta);
 
 	return true;
 }
