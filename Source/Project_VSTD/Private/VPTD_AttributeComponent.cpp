@@ -10,9 +10,9 @@ UVPTD_AttributeComponent::UVPTD_AttributeComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 
-	HealthMax = 100;
-	Level = 0;
-	Money = 0;
+	//HealthMax = 100;
+	//Level = 0;
+	//Money = 0;
 
 	Health = HealthMax;
 }

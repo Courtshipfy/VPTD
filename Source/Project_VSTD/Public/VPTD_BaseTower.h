@@ -22,13 +22,13 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
 	float Range;
 
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
-	float Timebetween;
+	/*UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
+	float Timebetween;*/
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
 	float MoveWithDis;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="炮塔属性")
-	float test_t;
+	int32 Level;
 
 };

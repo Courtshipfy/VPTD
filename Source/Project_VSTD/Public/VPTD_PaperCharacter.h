@@ -21,7 +21,7 @@ public:
 	virtual void BeginPlay() override;
 	virtual void PostInitializeComponents() override;
 
-	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="小明属性")
 	float MoveSpeed;
 	
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
