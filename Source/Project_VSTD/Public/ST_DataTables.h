@@ -52,6 +52,10 @@ struct FST_Turrent:public FTableRowBase
 
 public:
 
+	//花费金钱
+	UPROPERTY(EditAnywhere,BlueprintReadOnly)
+	int32 MoneyCost;
+	
 	//血量
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	float HP;

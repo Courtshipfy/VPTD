@@ -23,6 +23,9 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="小明属性")
 	float MoveSpeed;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="小明属性")
+	float AttackSpeed;
 	
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite)
 	UVPTD_AttributeComponent* VPTDAttribute;
