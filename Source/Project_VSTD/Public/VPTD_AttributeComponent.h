@@ -73,10 +73,4 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool ApplyChangeLevel(AActor* InstigatorActor,int32 Delta = 1);
-
-
-public:
-
-	/*UFUNCTION(Exec)
-	bool AddLevel(AActor* player,int32 delta);*/
 };

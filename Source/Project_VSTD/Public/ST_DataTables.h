@@ -41,8 +41,6 @@ public:
 	//敌人伤害
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	float DamageValue;
-
-	/*FST_Enemy(int32 InMoneyNum = 1,int32 InExpNum = 1,int32 InMoney = 1,int32 Exp = 100,float InHP = 200,):MoneyNum(InMoneyNum),ExpNum(InExpNum){}*/
 };
 
 USTRUCT()
@@ -75,13 +73,6 @@ public:
 	//攻击距离
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	float AttackRange;
-	
-	//是否穿透？
-	//UPROPERTY(EditAnywhere,BlueprintReadOnly)
-	//bool isPierce;
-	
-	//防御力
-	//UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	
 	//移动速度
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
